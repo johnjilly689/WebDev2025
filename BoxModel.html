@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is 1May2025 Branch</title>
+    <style>
+      body {
+        background-color: red;
+      }
+      .boxmodeldiagram {
+        width: 500px;
+        height: 700px;
+        background-color: green;
+      }
+
+      .boxmodeldiagram p {
+        background-color: black;
+        background-color: black;
+        width: 250px;
+        height: 300px;
+        background-color: black;
+        border: 2px solid blue;
+        padding: 87px;
+        color: white;
+        margin: 4px;
+      }
+
+      h1 {
+        background-color: aliceblue;
+        margin: 50px;
+        padding: 15px;
+        height: 45px;
+        width: 500px;
+      }
+      h2 {
+        background-color: aquamarine;
+        margin: 20px;
+        padding: 5px;
+        height: 25px;
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <strong>Note:</strong>Important: When you set the width and height
+      properties of an element with CSS, you just set the width and height of
+      the content area. To calculate the total width and height of an element,
+      you must also include the padding and borders.
+    </p>
+    <div class="boxmodeldiagram">
+      <p>
+        Explanation of the different parts: Content - The content of the box,
+        where text and images appear Padding - Clears an area around the
+        content. The padding is transparent Border - A border that goes around
+        the padding and content Margin - Clears an area outside the border. The
+        margin is transparent
+      </p>
+    </div>
+
+    <p>
+      que. but when we talk of width and height it is of content height and
+      width right? then according to your saying will content width be 240px?
+      <br />
+      ans: That's a great observation! Let's clarify how the width behaves in
+      relation to content, padding, and the total element size. Understanding
+      Content Width vs. Total Width - By default (box-sizing: content-box), the
+      width and height refer only to the content area. - Padding is extra and
+      adds to the total size of the element. If you set: width: 200px; padding:
+      20px; - The content width remains 200px. - But the total width (including
+      padding) will be 240px (200px content + 20px left padding + 20px right
+      padding).
+    </p>
+
+    <p>
+      The margin property also affects the total space that the box will take up
+      on the page, but the margin is not included in the actual size of the box.
+      The box's total width and height stops at the border.
+    </p>
+
+    <p>
+      q. example the h1 element has a bottom margin of 50px and the h2 element
+      has a top margin of 20px. So, the vertical margin between h1 and h2 should
+      have been 70px (50px + 20px). However, due to margin collapse, the actual
+      margin ends up being 50px. then what will be total height of h2 now will i
+      take margin as 20 or 50?
+      <br />
+      ans: Great question! Because of margin collapse, the larger margin (50px
+      from h1) takes precedence, and the smaller one (20px from h2) is ignored.
+      How to Calculate Total Height of - The content height of stays the same. -
+      Padding and border of are unaffected by margin collapse. - Margin behaves
+      differently:- The collapsed margin affects the space between elements, but
+      it does not add to h2's height directly. So, if you are calculating the
+      total height of h2, you only consider its own margin, padding, and
+      border—not the collapsed margin. Final Answer: - When measuring element
+      height (including padding/border): Take its own margin (20px). - When
+      measuring the spacing between elements: The vertical gap is 50px, because
+      of margin collapse.
+    </p>
+    <strong>Margin collapse</strong>
+    <h1>hello i am h1 with 50px margin</h1>
+    <h2>
+      hello i am h2 with 20px margin, but because of margin collapse i take 50
+      margin from top and bottom, but you will see 20 margin on browser layout
+      but actuall i have 50 dont get confused
+    </h2>
+  </body>
+</html>
