@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <style>
+      .main-container {
+        background-color: red;
+        width: 300px;
+        transition: width 2s;
+      }
+
+      .main-container:hover {
+        width: 500px;
+        transform: rotateX(45deg);
+      }
+
+      .container {
+        background-color: green;
+      }
+      .Transition {
+        height: 250px;
+        width: 250px;
+        background-color: red;
+        transition-property: width;
+        transition-timing-function: ease-in-out;
+        transition-duration: 5000ms;
+        transition-delay: 500ms;
+      }
+      .Transition:hover {
+        height: 250px;
+        width: 250px;
+        background-color: blue;
+        width: 450px;
+      }
+    </style>
+  </head>
+  <body>
+    css transitions enable you to define the transition between two
+    states(hover,foucus) of an element
+    <div class="main-container">
+      i am big container
+      <div class="container">i am small container</div>
+    </div>
+
+    css accept second and ms, but js accept ms only. transition-duration: The
+    transition-duration property in CSS controls how long a transition animation
+    should take to complete — that is, how much time it takes for a CSS property
+    to change from its initial state to its final state when a transition is
+    triggered. Transition-Property: The transition-property CSS property defines
+    which CSS properties should be animated when they change.
+    <!-- syntax: Transition-Property:property-name;
+     .box {
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+  In this case, only background-color will animate when it changes. If other properties like width or height change, they'll change instantly — not smoothly.
+ -->
+    <div class="Transition">hello</div>
+  </body>
+</html>

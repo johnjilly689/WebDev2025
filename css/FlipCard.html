@@ -1,0 +1,90 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FipCard Using Transform and Transition</title>
+
+    <style>
+      .CardContainer {
+        height: 400px;
+        width: 50vw;
+        background-color: blue;
+        border: 2px red;
+        transition-property: transform;
+      }
+      .CardContainer:hover {
+        transform: skewy(40deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="CardContainer">hello i am card Container, flip me</div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flip Card</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .card-container {
+        perspective: 1000px;
+      }
+
+      .card {
+        width: 300px;
+        height: 200px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.8s ease;
+      }
+
+      .card:hover {
+        transform: rotateY(180deg);
+      }
+
+      .card-side {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+      }
+
+      .card-front {
+        background-color: #3498db;
+        color: white;
+      }
+
+      .card-back {
+        background-color: #2ecc71;
+        color: white;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-side card-front">Front Side</div>
+        <div class="card-side card-back">Back Side</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!-- CSS 2D Transforms Functions With the CSS transform property you can use the
+following 2D transformation functions: translate() rotate() scaleX() scaleY()
+scale() skewX() skewY() skew() matrix() Translate: remember value of Transform
+property are x and y axis I.e: transform: translate(x axis,y axis) e.g The
+following example moves the
+<div>
+  element 50 pixels to the right(x axis), and 100 pixels down(y axis) from its
+  current position: Example div { transform: translate(50px, 100px); }
+</div>
+
+2)Rotate: The rotate() function rotates an element clockwise or
+counter-clockwise according to a given degree. The following example rotates the
+<div>
+  element clockwise with 20 degrees: Example div { transform: rotate(20deg); }
+  Using negative values will rotate the element counter-clockwise. Scale: The
+  scale(x axis,y axis) function increases or decreases the width and height of
+  an element in x and y axis skew:The skew() function skews an element along the
+  X and Y-axis by the given angles.use deg like rotate
+</div> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: green;
+        height: 250px;
+        width: 250px;
+        transform: rotatey(180deg);
+        /* transform-origin: top left; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
